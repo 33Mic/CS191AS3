@@ -72,6 +72,9 @@ We also decided to check the correlation between the GST and the price differenc
 
 ![GST Scatter](GSTScatter.png)
 
+Our R value was: 0.120461687488
+Thus we have a weak correlation
+
 
 # Conclusion
 ## Interesting finds: 
