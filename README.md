@@ -1,6 +1,6 @@
 # Toyota Corolla
 ## But why?
-Initially, I was searching for a product that I knew for sure had very different prices around the world so that it would be more interesting to do the data analysis, as there would be a multitude of reasons for the price differences. I was well aware that car prices are different around the world. Like in my country Pakistan, we have 200 percent import duties on cars, making it very expensive to buy a car, compared to a place like Dubai where there are barely any taxes when you buy a car.
+Initially, we'd searched for a product that we knew would have very different prices around the world so that we might have some interesting analysis to do, as that would mean that there could be a multitude of reasons for the price differences. Our team was well aware that car prices were different around the world. As an example, countries like Pakistan have over 200% import duties on cars, making it quite expensive to buy a car, compared to places like Dubai where there are comparatively little taxes when you buy a car.
 
 *Note: We also kept in mind that a good product to use for our index should be something akin to being a necessity.*  
 
@@ -48,7 +48,7 @@ We decided to do some analysis!
 ### But wait... something's not right??
 
 <details>
-<summary> AH! There we go!</summary>
+<summary> > AH! There we go!</summary>
 <br>
     
 <img src="FixedScatter.png">
