@@ -7,6 +7,6 @@ Initially, I was searching for a product that I knew for sure had very different
 ## Code snippets
 
 ## Graphs
-
+[Horizontal Bar Graph](Horizontal\ Bar\ Graph.jpg)
 ### A lesser title
 Maybe I can finally have this work properly
