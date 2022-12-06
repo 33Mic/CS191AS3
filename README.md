@@ -53,7 +53,8 @@ We decided to do some analysis!
     
 <img src="FixedScatter.png">
 
-Unfortunately, there must have been other factors that could have played a role in this, as the line appears to have a very weak correlation due to it's R value of `-0.222650693879`
+
+Unfortunately, there must have been other factors that could have played a role in this, as the line appears to have a very weak correlation due to it's R value of -0.222650693879
     
 </details>
 
