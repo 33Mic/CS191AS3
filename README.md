@@ -11,54 +11,19 @@ General Overview of our process
 Using Jupyter Notebooks, we organized and analyzed our data using techniques learnt in CMPUT 191. We also used a combination of web scraping, requesting from an API and some good ol' fashioned data cleaning. 
 
 - After finding our source containing relevant pricing information on our Toyota Corolla model of choice, we used web scraping to import our data.
-```py
-# WebScraping Pricing Data for Corollas in different countries
-
-r = requests.get("https://www.numbeo.com/cost-of-living/prices_by_country.jsp?displayCurrency=USD&itemId=206")
-soup = BeautifulSoup(r.text,'html.parser')
-table = soup.findAll("table")[1]
-
-display_table(table)
-```
 - Cleaning our web scraped data…
-  - We went through our imported table, dropped unnecessary columns (ie. ‘Rank’) and relabeled columns we planned on using for the sake of convenience and readability. 
-```py
-toyota_table = scrape_table(table).drop("Rank").relabel("Toyota Corolla Sedan 1.6l 97kW Comfort (Or Equivalent New Car)", "Toyota Corolla Sedan (USD)") # Rename Column
-
-# Source: (https://gist.github.com/HarishChaudhari/4680482)
-
-currencies_table = Table.read_table(path + "currencies_code.csv") # Import local file from Drive
-currencies_table.show(5)
-currencies_table = currencies_table.drop("CountryCode") # Don't need it
-currencies_table.show(5)
-
-# Joining the Pricing Data Table with the Local Currency Table by Country
-
-toyota_local_currency_code = toyota_table.join("Country",currencies_table,"Country") 
-toyota_local_currency_code.show(5)
-```
+    - We went through our imported table, dropped unnecessary columns (ie. ‘Rank’) and relabeled columns we planned on using for the sake of convenience and readability. 
 - Cleaning a csv file with data on Country, CountryCode, Currency and CurrencyCode.
-  - After dropping “Country Code” from the imported csv as it was irrelevant to our analysis, we joined the two tables we had using ‘Country’ that appears in both tables. 
-```py
-# Source: https://tradingeconomics.com/country-list/sales-tax-rate 
-# Part 3 of the assignment. Will use to factor local tax rates into the calculations
-
-GST = Table.read_table(path + 'GST.csv').drop(2,3).relabel("Last","GST(%)")
-
-GST_final = GST.drop("Unit").with_column("GST (%)",GST.apply(lambda x: x,"GST(%)"))
-GST_final.show(5)
-
-final_table = toyota_local_currency_code.join("Country",GST_final,"Country")
-final_table.show(5)
-```
+    - After dropping “Country Code” from the imported csv as it was irrelevant to our analysis, we joined the two tables we had using ‘Country’ that appears in both tables. 
 - Next, we imported and cleaned a table with information on tax rates per country. However we decided not to factor in GST to the sale price due to two reasons. 
-  - We found that car prices are impacted by many other taxes, duties and customs depending on the country. 
-  - Documentation did not specify whether or not the prices shown in their tables were before or after tax. As a result, we decided to keep the GST data available in our tables if further information was given in the future. 
+    - We found that car prices are impacted by many other taxes, duties and customs depending on the country. 
+    - Documentation did not specify whether or not the prices shown in their tables were before or after tax. As a result, we decided to keep the GST data available in our tables if further information was given in the future. 
 - Joined and cleaned the GST table with our latest version of our Toyota-Prices table.
 - We found an API that converted currencies to a specified base currency.
-  - After defining a function that would request conversions, we used .apply to create a column that converted our original prices (USD) to their respective local currencies.
-  - We also converted from USD to CAD using the same method. We also made sure not to include any rows where there was missing data for local currencies as the API did not have information for lesser known currencies.
-  - After defining the price of a Toyota Corolla in Canada, we then used that price to find the difference in price between each Country and Canada.
+    - After defining a function that would request conversions, we used `.apply` to create a column that converted our original prices (USD) to their respective local currencies.
+    - We also converted from USD to CAD using the same method. We also made sure not to include any rows where there was missing data for local currencies as the API did not have information for lesser known currencies.
+    - After defining the price of a Toyota Corolla in Canada, we then used that price to find the difference in price between each Country and Canada. From this, we were able to obtain a horizontal bar chart to obtain a relatively decent scale of the price differences between the respective country and Canada:
+![Horizontal Bar Graph](Horizontal Bar Graph.png)
 
 # External Factors
 ## Which external factor did we choose and why?
@@ -80,4 +45,4 @@ Ghana - CAD$5688.66
 
 
 ## Graphs
-![Horizontal Bar Graph](Horizontal Bar Graph.png)
+
