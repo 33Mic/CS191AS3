@@ -40,7 +40,24 @@ As a general overview of our process, using Jupyter Notebooks, we organized and 
 
 We decided to see if levels of pollution had an effect on the price of Toyota Corollas by country as it is known that certain countries will raise the price of its cars in an attempt to reduce pollution. As an example, as of 2022, Singapore has a tax (‘Excise Duty’) that is 20% of any car’s OMV (open market value). 
 
-Our logic was; If the pollution in a given country is higher, the price of a Corolla would be higher as well due to regulations made in an attempt to curb pollution output. We thought that the prices would increase in order to make it harder to purchase a car and contribute to the country’s pollution. 
+Our logic was: If the pollution in a given country is higher, the price of a Corolla would be higher as well due to regulations made in an attempt to curb pollution output. We thought that the prices would increase in order to make it harder to purchase a car and contribute to the country’s pollution. 
+
+We decided to do some analysis!
+
+![Flawed Scatter](FlawedScatter.png)
+### But wait... something's not right??
+
+<details>
+<summary> AH! There we go!</summary>
+<br>
+    
+![Fixed Scatter](FixedScatter.png)
+
+Unfortunately, there must have been other factors that could have played a role in this, as the line appears to have a very weak correlation due to it's R value of `-0.222650693879`
+    
+</details>
+
+
 
 # Conclusion
 ## Interesting finds: 
@@ -51,8 +68,9 @@ After graphing our analysis (Pollution vs Price of Corolla) we discovered the op
 - Github Pages has deprecated the "Theme Picker" option due to a security flaw. Thus we needed to find a workaround, looking for methods of hosting Jekyll websites through Github Pages, but we finally settled for a simple template that would allow us to easily import a theme.
 
 ## Max/min prices and their respective locations:
-Singapore - CAD$135,822
-Ghana - CAD$5688.66
+CAD$135,822 - Singapore 
+
+CAD$5688.66 - Ghana 
 
 
 ## Graphs
