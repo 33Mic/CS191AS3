@@ -7,6 +7,11 @@ Initially, we'd searched for a product that we knew would have very different pr
 ## Steps we took to create our index:
 
 As a general overview of our process, using Jupyter Notebooks, we organized and analyzed our data using techniques learnt in CMPUT 191. We also used a combination of web scraping, requesting from an API and some good ol' fashioned data cleaning. 
+### Tables Used: 
+- Toyota Corolla Price Table (Source: https://www.numbeo.com/cost-of-living/prices_by_country.jsp?displayCurrency=USD&itemId=206)
+- Currency Codes Table (Source: https://gist.github.com/HarishChaudhari/4680482)
+- GST Table (Source: https://tradingeconomics.com/country-list/sales-tax-rate)
+- Pollution Index Table (Source: https://www.iqair.com/ca/world-most-polluted-countries)
 
 ### Scraping!
 - After finding our source containing relevant pricing information on our Toyota Corolla model of choice, we used web scraping to import our data.
