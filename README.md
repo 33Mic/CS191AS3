@@ -2,8 +2,8 @@
 ## But why?
 Initially, I was searching for a product that I knew for sure had very different prices around the world so that it would be more interesting to do the data analysis, as there would be a multitude of reasons for the price differences. I was well aware that car prices are different around the world. Like in my country Pakistan, we have 200 percent import duties on cars, making it very expensive to buy a car, compared to a place like Dubai where there are barely any taxes when you buy a car.
 
-
-*Note: We also kept in mind that a good product to use for our index should be something akin to being a necessity.*  
+{: .note }
+> We also kept in mind that a good product to use for our index should be something akin to being a necessity.  
 ## Steps we took to create our index:
 
 As a general overview of our process, using Jupyter Notebooks, we organized and analyzed our data using techniques learnt in CMPUT 191. We also used a combination of web scraping, requesting from an API and some good ol' fashioned data cleaning. 
