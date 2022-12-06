@@ -59,11 +59,12 @@ We decided to do some analysis!
 <img src="FixedScatter.png">
 
 <br/>
-    
+
     
 Unfortunately, there must have been other factors that could have played a role in this, as the line appears to have a very weak correlation due to it's R value of -0.222650693879
     
 </details>
+
 
 ### GST and Price Difference
 We also decided to check the correlation between the GST and the price difference of the cars relative to the Canadian price.
@@ -74,8 +75,7 @@ We also decided to check the correlation between the GST and the price differenc
 
 # Conclusion
 ## Interesting finds: 
-After graphing our analysis (Pollution vs Price of Corolla) we discovered the opposite of what we had thought -pollution was greater in countries that had cheaper prices for Corollas. This makes sense as a greater number of people will have access to cars in the countries that they’re cheaper in and as a result, there will be more contributors to the country’s pollution.
-
+After graphing our analysis (Pollution vs Price of Corolla) we discovered that our null hypothesis was flawed - pollution was greater in countries that had cheaper prices for Corollas. This makes sense as a greater number of people will have access to cars in the countries that they’re cheaper in and as a result, there will be more contributors to the country’s pollution.
 ## Difficulties/Challenges: 
 - The API that we used for currency conversion did not have conversion rates for lesser known places. We decided to remove these countries from our analysis. 
 - Github Pages has deprecated the "Theme Picker" option due to a security flaw. Thus we needed to find a workaround, looking for methods of hosting Jekyll websites through Github Pages, but we finally settled for a simple template that would allow us to easily import a theme.
