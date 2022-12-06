@@ -65,6 +65,10 @@ Unfortunately, there must have been other factors that could have played a role 
     
 </details>
 
+We also decided to check the correlation between the GST and the price difference of the cars relative to the Canadian price.
+[GST Scatter](GSTScatter.png)
+
+
 # Conclusion
 ## Interesting finds: 
 After graphing our analysis (Pollution vs Price of Corolla) we discovered the opposite of what we had thought -pollution was greater in countries that had cheaper prices for Corollas. This makes sense as a greater number of people will have access to cars in the countries that they’re cheaper in and as a result, there will be more contributors to the country’s pollution.
