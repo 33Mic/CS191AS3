@@ -51,13 +51,11 @@ We decided to do some analysis!
 <summary> AH! There we go!</summary>
 <br>
     
-![Fixed Scatter](FixedScatter.png)
+<img src="FixedScatter.png">
 
 Unfortunately, there must have been other factors that could have played a role in this, as the line appears to have a very weak correlation due to it's R value of `-0.222650693879`
     
 </details>
-
-
 
 # Conclusion
 ## Interesting finds: 
@@ -71,7 +69,3 @@ After graphing our analysis (Pollution vs Price of Corolla) we discovered the op
 CAD$135,822 - Singapore 
 
 CAD$5688.66 - Ghana 
-
-
-## Graphs
-
