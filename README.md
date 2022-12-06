@@ -65,6 +65,7 @@ Unfortunately, there must have been other factors that could have played a role 
     
 </details>
 
+### GST and Price Difference
 We also decided to check the correlation between the GST and the price difference of the cars relative to the Canadian price.
 
 
